@@ -3,7 +3,15 @@
     "type": "object",
     "properties": {
       "name": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "bar": {
+            "type": "string"
+          },
+          "foo": {
+            "type": "string"
+          }
+        }
       }
     }
   }

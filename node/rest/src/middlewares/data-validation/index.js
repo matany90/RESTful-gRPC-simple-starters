@@ -41,12 +41,13 @@ export const validateData = (identifier) => async (req, res, next) => {
  * @returns {Object} - formatted errors object
  */
 const formattedError = (errors) => {
+  console.log(errors)
   // define formatted erros object
   let formattedError = {}
 
   // build the formatted error object
   errors.forEach(err => {
-    const [el, name] = err.property.split(".")
+    const name = err.property.substring(err.property.indexOf(".") + 1)
     formattedError[name] = err.message
   })
 

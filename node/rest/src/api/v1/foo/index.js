@@ -7,6 +7,7 @@ const router = require("express").Router({ mergeParams: true })
 router.get("/", async (req, res) => {
   try {
     // Do whatever...
+
     res.json({ foo: "bar" })
   } catch (e) {
     console.error(e)
@@ -18,6 +19,7 @@ router.get("/", async (req, res) => {
 router.post("/", validateData("foo"), async (req, res) => {
   try {
     // Do whatever...
+
     res.json({ bar: "zoo" })
   } catch (e) {
     console.error(e)
@@ -28,6 +30,7 @@ router.post("/", validateData("foo"), async (req, res) => {
 // PUT foo
 router.put("/", async (req, res) => {
   try {
+    // Do whatever...
     res.json({ one: "two" })
   } catch (e) {
     console.error(e)
@@ -38,6 +41,8 @@ router.put("/", async (req, res) => {
 // DELETE foo
 router.delete("/", async (req, res) => {
   try {
+    // Do whatever...
+
     res.json({ hoo: "boo" })
   } catch (e) {
     console.error(e)

@@ -1,3 +1,5 @@
+import { validateData } from "../../../middlewares/data-validation"
+
 // Init Router
 const router = require("express").Router({ mergeParams: true })
 
@@ -7,8 +9,13 @@ router.get("/", async (req, res) => {
 })
 
 // POST foo
-router.post("/", async (req, res) => {
-  res.json({ bar: "zoo"})
+router.post("/", validateData("foo"), async (req, res) => {
+  try {
+    res.json({ bar: "zoo" })
+  } catch (e) {
+    // console.error(e)
+    res.status(500).json({ error: "unable to create foo." })
+  }
 })
 
 // PUT foo

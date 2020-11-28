@@ -1,0 +1,10 @@
+{
+  "foo": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "number"
+      }
+    }
+  }
+}

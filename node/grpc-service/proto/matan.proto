@@ -1,0 +1,18 @@
+syntax = "proto3";
+package matan;
+
+// ---------- Matan's Service ----------
+service MatanService {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHi (HelloRequest) returns (HelloReply) {}
+}
+
+// Define hello message request
+message HelloRequest {
+  string name = 1;
+}
+
+// Define hello reply response
+message HelloReply {
+  string message = 1;
+}

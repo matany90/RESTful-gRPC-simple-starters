@@ -1,0 +1,39 @@
+before:
+  hooks:
+    - make vendor
+builds:
+- binary: rest
+
+  # Path to main.go file or main package.
+  # Default is `.`.
+  main: ./cmd/rest/main.go
+  env:
+    - CGO_ENABLED=0
+  ldflags:
+    - -s -w -X main.build={{ .Version }} -X main.commit={{ .ShortCommit }} -X main.date={{ .Date }}
+  goos:
+    - darwin
+    - linux
+    - windows
+  goarch:
+    - 386
+    - amd64
+archives:
+- replacements:
+    darwin: macos
+    linux: linux
+    windows: windows
+    386: 32-bit
+    amd64: 64-bit
+  format: zip
+  # files:
+  #   - README.md # We will add docs don't worry
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Version }}_{{ .ShortCommit }}"
+changelog:
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'

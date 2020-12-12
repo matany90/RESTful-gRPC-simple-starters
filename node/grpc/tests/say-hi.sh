@@ -3,7 +3,7 @@
 HOST="127.0.0.1"
 PORT="50001"
 
-GRPC_ROOT_PATH="$HOME/Desktop/Comp/RESTful-gRPC-simple-starters/node/grpc-service"
+GRPC_ROOT_PATH="$HOME/Desktop/Comp/RESTful-gRPC-simple-starters/node/grpc"
 
 grpcurl \
   -plaintext \

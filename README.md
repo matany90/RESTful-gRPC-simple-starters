@@ -1,1 +1,8 @@
 # RESTful-gRPC-simple-starters
+
+# Welcome to the world of Simple Starters!
+<img src="https://imgur.com/Io9QY36" width="400">
+
+The goal of the project is to create simple and documented templates for server-side applications,
+in a variety of programming languages and technologies.
+

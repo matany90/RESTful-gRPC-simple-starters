@@ -1,5 +1,3 @@
-# RESTful-gRPC-simple-starters
-
 # Welcome to the world of Simple Starters!
 <img src="https://imgur.com/Io9QY36.png" width="600">
 

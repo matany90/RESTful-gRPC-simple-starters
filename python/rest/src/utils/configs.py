@@ -1,0 +1,1 @@
+EXAMPLE_REST_SERVICE_BASIC_TOKEN = "some-basic-string-token..."

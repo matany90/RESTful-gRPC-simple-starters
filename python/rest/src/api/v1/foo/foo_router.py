@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+import json
 
 # init foo blueprint router
 foo_router = Blueprint("foo", __name__)
@@ -33,7 +34,7 @@ def update():
     Update a foo.
     '''
     # pull data
-    data = request.json.get("data", {})
+    data = request.get_json()
     id = request.json.get("id", "")
 
     # Do an API call...
@@ -49,7 +50,7 @@ def create():
     Create a foo.
     '''
     # pull data
-    data = request.json.get("data", {})
+    data = request.get_json()
 
     # Do an API call...
 

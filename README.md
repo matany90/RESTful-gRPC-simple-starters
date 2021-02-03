@@ -21,3 +21,7 @@ a RESTful base service, written in Go using Gin Framework. <br /> Includes Docke
 ### **gRPC service**<br />
 a gRPC base service (ontop of HTTP 2.0), written in Go.<br /> Includes Dockerfile for build stage, test scripts and relevate Makefile <br /> In addition, the serivce is build with all basic Middlwares tamplets for auth validation, data validation and headers validation. <br />
 As any other gRPC service, the source code includes a simple proto file for sample purposes.
+
+# **Python**<br />
+### **RESTful service** <br>
+a RESTful base service, written in Python using Flask Framework. <br /> Includes Dockerfile for build stage, test scripts and relevate Makefile. <br /> In addition, the serivce is build with all basic Middlwares tamplets for auth validation, data validation and headers validation.

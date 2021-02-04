@@ -73,7 +73,6 @@ class MatanService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
-            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -82,7 +81,7 @@ class MatanService(object):
             matan__service__pb2.HelloRequest.SerializeToString,
             matan__service__pb2.HelloReply.FromString,
             options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def SayHi(request,
@@ -90,7 +89,6 @@ class MatanService(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
-            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -99,4 +97,4 @@ class MatanService(object):
             matan__service__pb2.HelloRequest.SerializeToString,
             matan__service__pb2.HelloReply.FromString,
             options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            call_credentials, compression, wait_for_ready, timeout, metadata)
